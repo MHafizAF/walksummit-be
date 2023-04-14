@@ -25,7 +25,7 @@ class PemesananController extends Controller
     {
         $grup = Grup::join('jalurs', 'grups.jalur_id', '=', 'jalurs.id')
             ->join('pelanggans', 'grups.id', '=', 'pelanggans.grup_id')
-            ->select('grups.id', 'pelanggans.nama as koordinator', 'grups.status', 'jalurs.nama as jalur')
+            ->select('grups.id', 'pelanggans.nama as koordinator', 'grups.status', 'grups.tgl_brangkat', 'jalurs.nama as jalur')
             ->where('grups.id', $id)
             ->first();
 
