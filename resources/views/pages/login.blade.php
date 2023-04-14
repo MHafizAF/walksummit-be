@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
-                        <h1 class="text-white mb-2 mt-5">BASECAMP SINDORO</h1>
+                        <h1 class="text-white mb-2 mt-5">ADMIN PAGE</h1>
                     </div>
                 </div>
             </div>

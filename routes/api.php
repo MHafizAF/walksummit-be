@@ -29,6 +29,7 @@ Route::controller(HelloController::class)->group(function () {
 
 Route::controller(GunungController::class)->group(function () {
     Route::get('/informasi-gunung', 'getInformasiGunung');
+    Route::get('/jalur', 'getAllJalur');
 });
 
 Route::controller(PemesananController::class)->group(function () {
