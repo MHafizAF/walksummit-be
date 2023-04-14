@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('jalurs', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->boolean('status');
+            $table->boolean('status')->default(1);
             $table->integer('kuota');
             $table->timestamps();
         });
