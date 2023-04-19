@@ -5,6 +5,7 @@ use App\Http\Controllers\JalurController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GrupController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PendakiController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,10 @@ Route::controller(PendakiController::class)->group(function () {
     Route::get('/pendaki/{id}/checkout', 'checkout')->middleware('auth')->name('pendaki.checkout');
     Route::put('/pendaki/{id}', 'update')->middleware('auth')->name('pendaki.update');
     Route::delete('/pendaki/{id}', 'destroy')->middleware('auth')->name('pendaki.destroy');
+});
+
+Route::controller(LaporanController::class)->group(function () {
+    Route::get('/laporan', 'index')->middleware('auth')->name('laporan.index');
 });
 
 Route::resource('admin', AdminController::class)->middleware('auth');
