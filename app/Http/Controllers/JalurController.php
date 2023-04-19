@@ -57,6 +57,7 @@ class JalurController extends Controller
         ]);
 
         Jalur::create([
+            'admin_id' => $request->admin_id,
             'nama' => $request->nama,
             'kuota' => $request->kuota,
         ]);
@@ -112,6 +113,7 @@ class JalurController extends Controller
         }
 
         Jalur::where('id', $id)->update([
+            'admin_id' => $request->admin_id,
             'nama' => $request->nama,
             'kuota' => $request->kuota,
         ]);

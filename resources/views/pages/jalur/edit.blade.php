@@ -47,6 +47,7 @@
                 <form action="{{ route('jalur.update', $jalur->id) }}" method="POST">
                     @csrf
                     @method('put')
+                    <input type="hidden" name="admin_id" value="{{ Auth::user()->id }}">
                     <div class="form-group">
                         <label for="nama" class="form-control-label">Nama</label>
                         <input class="form-control @error('nama') is-invalid @enderror" type="text"
