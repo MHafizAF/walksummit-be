@@ -9,7 +9,7 @@ class PendakiController extends Controller
 {
     public function index()
     {
-        $pendaki = Pelanggan::orderBy('id', 'desc')->paginate(10);
+        $pendaki = Pelanggan::orderBy('grup_id', 'desc')->paginate(10);
 
         return view('pages.pendaki.index')->with([
             'pendaki' => $pendaki,

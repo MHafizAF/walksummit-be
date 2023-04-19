@@ -46,6 +46,7 @@
             <div class="card-body">
                 <form action="{{ route('jalur.store') }}" method="POST">
                     @csrf
+                    <input type="hidden" name="admin_id" value="{{ Auth::user()->id }}">
                     <div class="form-group">
                         <label for="nama" class="form-control-label">Nama</label>
                         <input class="form-control @error('nama') is-invalid @enderror" type="text"

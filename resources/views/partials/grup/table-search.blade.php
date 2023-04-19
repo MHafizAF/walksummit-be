@@ -5,6 +5,10 @@
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     id</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                    Tanggal Berangkat</th>
+                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                    Tanggal Pulang</th>
+                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     status</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                     action
@@ -15,6 +19,8 @@
         <tbody>
             <tr>
                 <td class="text-center"> {{ $grup->id }}</td>
+                <td class="text-center"> {{ $grup->tgl_brangkat }}</td>
+                <td class="text-center"> {{ $grup->tgl_pulang }}</td>
                 <td class="align-middle text-center text-sm">
                     @if ($grup->status == 1)
                     <a href="{{ route('grup.status', $grup->id) }}" class="badge bg-gradient-success">Sudah
