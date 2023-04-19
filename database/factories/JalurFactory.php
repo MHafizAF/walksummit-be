@@ -17,6 +17,7 @@ class JalurFactory extends Factory
     public function definition()
     {
         return [
+            'admin_id' => 1,
             'nama' => $this->faker->name,
             'status' => $this->faker->boolean,
             'kuota' => 500,

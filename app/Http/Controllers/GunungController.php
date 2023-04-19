@@ -42,4 +42,15 @@ class GunungController extends Controller
 
         return response()->json($response, Response::HTTP_OK);
     }
+
+    public function getAllJalur()
+    {
+        $jalur = Jalur::all();
+        $response = [
+            'message' => 'jalur',
+            'data' => [$jalur]
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
+    }
 }

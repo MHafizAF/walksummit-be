@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jalurs', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->boolean('status')->default(1);
-            $table->integer('kuota');
-            $table->timestamps();
+        Schema::table('jalurs', function (Blueprint $table) {
+            $table->unsignedBigInteger('admin_id');
+            $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
         });
     }
 
@@ -29,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jalurs');
+        Schema::table('jalurs', function (Blueprint $table) {
+            //
+        });
     }
 };
